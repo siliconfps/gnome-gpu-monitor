@@ -1,0 +1,8 @@
+{
+    "name": "GPU Monitor",
+    "description": "Monitor GPU usage, VRAM, clock, memory clock, temperature and power consumption.\nSupports AMD (amdgpu) and NVIDIA GPUs.",
+    "uuid": "gpu-monitor@eli",
+    "shell-version": ["42"],
+    "version": 1,
+    "url": "https://github.com/eli/gpu-monitor"
+}
