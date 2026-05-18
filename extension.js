@@ -240,9 +240,9 @@ class GpuMonitorIndicator extends PanelMenu.Button {
 
         if (usage !== null)  parts.push(`${usage}%`);
         if (temp !== null)   parts.push(`${Math.round(temp)}\u00b0C`);
-        if (gpuClk !== null) parts.push(`${gpuClk}MHz`);
+        if (gpuClk !== null) parts.push(`${(gpuClk / 1000).toFixed(1).replace(/\.0$/, '')}GHz`);
 
-        this._label.set_text(parts.join(' '));
+        this._label.set_text(parts.join(' | '));
 
         if (usage !== null) {
             this._label.remove_style_class_name('gpu-monitor-usage-high');
@@ -266,9 +266,9 @@ class GpuMonitorIndicator extends PanelMenu.Button {
         this._gpuUsageItem.label.set_text(
             `GPU Usage: ${usage !== null ? usage + '%' : '--'}`);
         this._gpuClockItem.label.set_text(
-            `GPU Clock: ${gpuClk !== null ? gpuClk + ' MHz' : '--'}`);
+            `GPU Clock: ${gpuClk !== null ? (gpuClk / 1000).toFixed(1).replace(/\.0$/, '') + ' GHz' : '--'}`);
         this._memClockItem.label.set_text(
-            `Mem Clock: ${memClk !== null ? memClk + ' MHz' : '--'}`);
+            `Mem Clock: ${memClk !== null ? (memClk / 1000).toFixed(1).replace(/\.0$/, '') + ' GHz' : '--'}`);
 
         if (vramU !== null && vramT !== null) {
             let usedMB  = Math.round(vramU / (1024 * 1024));
