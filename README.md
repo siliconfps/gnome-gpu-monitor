@@ -38,10 +38,7 @@ mkdir -p ~/.local/share/gnome-shell/extensions/gpu-monitor@eli
 # 2. Copie todos os arquivos para lá
 cp extension.js metadata.json stylesheet.css ~/.local/share/gnome-shell/extensions/gpu-monitor@eli/
 
-# 3. Habilite a extensão
-gnome-extensions enable gpu-monitor@eli
-
-# 4. Reinicie o GNOME Shell (opcional, mas recomendado)
+# 3. Reinicie o GNOME Shell
 #    Pressione Alt+F2, digite "r" e pressione Enter
 #    Ou faça logout/login
 ```
