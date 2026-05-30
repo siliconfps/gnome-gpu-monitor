@@ -185,7 +185,7 @@ class GpuMonitorIndicator extends PanelMenu.Button {
 
         this._box = new St.BoxLayout({ style_class: 'panel-status-indicators-box' });
         this._icon = new St.Icon({
-            icon_name: 'video-display-symbolic',
+            icon_name: 'freon-gpu-temperature-symbolic',
             style_class: 'system-status-icon',
         });
         this._label = new St.Label({
